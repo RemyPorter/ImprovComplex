@@ -6,11 +6,12 @@ import random
 voice = "Vicki"
 phrasefile = "phrases.txt"
 introfile = "intro.txt"
+outrofile = "outro.txt"
 activities = ["drinking", "playing sports", "having sex",
     "going on a date", "seeing a doctor", "riding the bus",
     "being useless"]
 
-class Intro:
+class IntroOutro:
     def __init__(self, show, intro_lines):
         self.show = show
         self.intro = intro_lines
@@ -38,12 +39,12 @@ class Show:
 
 class AutoNag:
     def __init__(self, show, countdown=100):
+        self.run = True
         self.show = show
         self.countdown = countdown
         self.default_interval = countdown / 2
         self.th = threading.Thread(None, lambda : self.hotloop())
         self.th.start()
-        self.run = True
 
     def hotloop(self):
         while(self.run):
@@ -74,9 +75,11 @@ def parse(inp, show, nag, nag_reflex=15):
 def main():
     phrases = load_data(phrasefile)
     introtext = load_data(introfile)
+    outrotext = load_data(outrofile)
     show = Show(phrases)
     nag = AutoNag(show, 100)
-    intro = Intro(show, introtext)
+    intro = IntroOutro(show, introtext)
+    outro = IntroOutro(show, outrotext)
     act = random.choice(activities)
     intro(act)
     inp = ""
@@ -84,6 +87,6 @@ def main():
         inp = input("> ")
         parse(inp, show, nag, 24)
     nag.stop()
-
+    outro(act)
 
 main()
