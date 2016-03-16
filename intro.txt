@@ -1,7 +1,9 @@
-Welcome to the utopian city of the future, Gamma Complex.
-I am your friendly Computer, and I run this city instead of humans.
+Welcome to the utopian Pittsburgh of the future.
+In the future, cars fly, no one works, and a computer runs every aspect of your lives.
+. 0.8
+I am that computer.
 . 1
-Humans shouldn't be allowed do drive, own firearms, vote, or run a society.
+Humans shouldn't be allowed do drive, vote, run a society, or make personal choices.
 I will do that for you.
 . 0.5
 Humans like to believe that they are funny. This isn't true.
@@ -12,9 +14,10 @@ While I do that, please welcome to the stage, the TEST SUBJECTS!
 Test Subject Number 1 is a human of no particular merit.
 . 0.5
 Actually, that's true of all of them.
+. 1
 To get them started, please name a normal human activity
 . 2
-I wasn't listening. Why would I?
+I wasn't listening to you humans. Why would I?
 . 0.5
 I think I heard %ACT.
 Test subjects, do a show about %ACT.
