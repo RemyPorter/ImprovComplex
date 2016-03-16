@@ -1,6 +1,6 @@
 Welcome to the utopian city of the future, Gamma Complex.
-I am the Computer, and I run this city instead of humans.
-. 0.5
+I am your friendly Computer, and I run this city instead of humans.
+. 1
 Humans shouldn't be allowed do drive, own firearms, vote, or run a society.
 I will do that for you.
 . 0.5

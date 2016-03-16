@@ -81,10 +81,12 @@ def main():
     intro = IntroOutro(show, introtext)
     outro = IntroOutro(show, outrotext)
     act = random.choice(activities)
-    intro(act)
+    #intro(act)
     inp = ""
-    while inp != "q":
+    while True:
         inp = input("> ")
+        if inp == "q":
+            break
         parse(inp, show, nag, 24)
     nag.stop()
     outro(act)
