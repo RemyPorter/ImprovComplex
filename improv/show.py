@@ -81,7 +81,7 @@ def main():
     intro = IntroOutro(show, introtext)
     outro = IntroOutro(show, outrotext)
     act = random.choice(activities)
-    #intro(act)
+    intro(act)
     inp = ""
     while True:
         inp = input("> ")
@@ -90,5 +90,3 @@ def main():
         parse(inp, show, nag, 24)
     nag.stop()
     outro(act)
-
-main()

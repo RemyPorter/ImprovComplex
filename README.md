@@ -2,7 +2,7 @@ This uses the OSX `say` command line tool, so this is OS specific.
 
 This program creates a passive-aggressive computer that guides an improv show. It is meant to be used with an operator.
 
-You launch the program with: `python3 show.py`
+You launch the program with: `python3 -m improv`
 
 This will recite an intro, and then provide you with a `> ` prompt. At the prompt, you may type any sentence, and when you hit enter, the computer will say that.
 
