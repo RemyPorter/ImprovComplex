@@ -20,10 +20,10 @@ def build_parser():
         default=False, dest="no_auto")
     showing.add_option("-t", "--nag-rate", default=35,
         help="The frequency of nagging, meausred in seconds.",
-        dest="nag_rate")
+        dest="nag_rate", type=int)
     showing.add_option("-j", "--jitter", default=0.1,
         help="How much the timing can drift from the nag-rate, from 0-1",
-        dest="jitter")
+        dest="jitter", type=float)
     showing.add_option("-v", "--voice", default="Vicki",
         help="The synthesized voice to use.", dest="voice")
     parser.add_option_group(showing)
