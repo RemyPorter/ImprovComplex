@@ -38,20 +38,24 @@ class Show:
         self.say(random.choice(self.phrases))
 
 class AutoNag:
-    def __init__(self, show, countdown=100):
+    def __init__(self, show, countdown=100, jitter=0.0):
         self.run = True
         self.show = show
         self.countdown = countdown
-        self.default_interval = countdown / 2
+        self.default_interval = countdown
+        self.jitter = jitter
         self.th = threading.Thread(None, lambda : self.hotloop())
         self.th.start()
+
+    def __jitter__(self):
+        return (1 - self.jitter * 2) * self.countdown * random.random()
 
     def hotloop(self):
         while(self.run):
             self.countdown -= 1
             if (self.countdown <= 0):
                 self.show.say_rand()
-                self.countdown = self.default_interval * random.random()
+                self.countdown = self.default_interval + self.__jitter__()
             sleep(1.0)
 
     def stop(self):
