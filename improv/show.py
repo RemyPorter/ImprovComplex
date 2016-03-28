@@ -72,12 +72,12 @@ def parse(inp, show, nag, nag_reflex=15):
         show.say(inp)
     nag.countdown += nag_reflex
 
-def main():
-    phrases = load_data(phrasefile)
-    introtext = load_data(introfile)
-    outrotext = load_data(outrofile)
+def main(**kwargs):
+    phrases = load_data(kwargs["phrases"])
+    introtext = load_data(kwargs["intro"])
+    outrotext = load_data(kwargs["outro"])
     show = Show(phrases)
-    nag = AutoNag(show, 100)
+    nag = AutoNag(show, kwargs["nag_rate"])
     intro = IntroOutro(show, introtext)
     outro = IntroOutro(show, outrotext)
     act = random.choice(activities)
