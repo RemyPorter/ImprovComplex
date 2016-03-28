@@ -25,7 +25,8 @@ def build_parser():
         help="How much the timing can drift from the nag-rate, from 0-1",
         dest="jitter", type=float)
     showing.add_option("-v", "--voice", default="Vicki",
-        help="The synthesized voice to use.", dest="voice")
+        help="The synthesized voice to use.  See system documentation for the \"say\" command.",
+        dest="voice")
     parser.add_option_group(showing)
 
     return parser
