@@ -75,3 +75,4 @@ target/
 # dotenv
 .env
 
+test_*.txt
